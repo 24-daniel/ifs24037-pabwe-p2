@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mengenal Large Language Model dan Cara Kerjanya — mahaAI</title>
+    <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
+
+    <!-- Halaman ini memakai Bootstrap 5 + Bootstrap Icons (CDN). -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body class="bg-light">
+    <!-- ===== NAVBAR: brand + menu (Bootstrap navbar) ===== -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm" aria-label="Navigasi utama">
+        <div class="container">
+          <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html#home">
+            <img src="assets/img/logo.svg" alt="" width="32" height="32" class="rounded-2 border border-2 border-white" />
+            <span>maha<span class="fw-normal">AI</span></span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Buka menu navigasi">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navMain">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-1">
+              <li class="nav-item"><a class="nav-link text-white" href="index.html#home">Home</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="index.html#layanan">Layanan</a></li>
+              <li class="nav-item"><a class="nav-link text-white fw-bold active" href="blog.html" aria-current="page">Blog</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="cv.html">CV</a></li>
+              <li class="nav-item ms-lg-2">
+                <a href="index.html#kontak" class="btn btn-light btn-sm">Coba Gratis</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb" class="mb-3">
+              <ol class="breadcrumb small">
+                <li class="breadcrumb-item"><a href="blog.html" class="text-primary-emphasis">Blog</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Machine Learning</li>
+              </ol>
+            </nav>
+
+            <!-- ===== ARTIKEL ===== -->
+            <article>
+              <header>
+                <span class="badge text-bg-success mb-3">
+                  <i class="bi bi-cpu me-1" aria-hidden="true"></i> Machine Learning
+                </span>
+
+                <h1 class="fw-bold mb-3">Mengenal Large Language Model dan Cara Kerjanya</h1>
+
+                <div class="d-flex flex-wrap align-items-center gap-3 text-body-secondary small mb-4 pb-3 border-bottom">
+                  <span><i class="bi bi-person-circle me-1" aria-hidden="true"></i>Tim mahaAI</span>
+                  <span><i class="bi bi-calendar3 me-1" aria-hidden="true"></i><time datetime="2026-09-12">12 September 2026</time></span>
+                  <span><i class="bi bi-clock me-1" aria-hidden="true"></i>6 menit baca</span>
+                </div>
+
+                <figure class="ratio ratio-21x9 rounded overflow-hidden mb-4">
+                  <img
+                    src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200"
+                    alt="Ilustrasi large language model"
+                    class="object-fit-cover"
+                  />
+                </figure>
+              </header>
+
+              <div class="lh-lg">
+                <p>
+                  Large Language Model (LLM) adalah model AI yang dilatih dari
+                  teks dalam jumlah sangat besar sehingga bisa memahami
+                  konteks bahasa dan menghasilkan balasan yang terasa alami.
+                  Inilah "otak" di balik asisten chat seperti mahaAI: model
+                  membaca pertanyaanmu, mempertimbangkan konteks percakapan
+                  sebelumnya, lalu menyusun jawaban kata demi kata.
+                </p>
+
+                <p>
+                  Secara sederhana, LLM bekerja dengan memprediksi kata
+                  berikutnya yang paling masuk akal berdasarkan pola yang
+                  dipelajarinya selama pelatihan. Semakin banyak dan beragam
+                  data yang dipakai untuk melatihnya, semakin luas juga topik
+                  yang bisa dipahami model tersebut — mulai dari menjelaskan
+                  konsep kuliah, merangkum artikel, sampai membantu menyusun
+                  kode program.
+                </p>
+
+                <blockquote class="blockquote border-start border-4 border-primary ps-3 my-4 text-body-secondary">
+                  LLM bukan mesin pencari fakta, melainkan mesin penyusun
+                  bahasa — karena itu jawabannya tetap perlu dicek ulang
+                  untuk hal-hal yang penting.
+                </blockquote>
+
+                <p>
+                  Untuk pemakaian sehari-hari, kamu tidak perlu paham detail
+                  matematika di baliknya. Yang lebih penting adalah tahu cara
+                  memberi instruksi yang jelas: sebutkan konteks, tujuan, dan
+                  format jawaban yang kamu inginkan. Semakin spesifik
+                  pertanyaanmu, semakin relevan juga jawaban yang diberikan
+                  asisten AI.
+                </p>
+
+                <h2 class="h4 mt-4 mb-3">Tips memulai memakai asisten AI</h2>
+                <ul>
+                  <li>Mulai dari tugas kecil yang berulang setiap minggu</li>
+                  <li>Tulis instruksi dengan konteks yang jelas</li>
+                  <li>Selalu cek ulang jawaban untuk data atau fakta penting</li>
+                  <li>Simpan prompt yang berhasil untuk dipakai lagi nanti</li>
+                </ul>
+
+                <div class="alert alert-info d-flex align-items-start gap-2 mt-4" role="note">
+                  <i class="bi bi-lightbulb-fill fs-5" aria-hidden="true"></i>
+                  <div>
+                    <strong>Tahukah kamu?</strong> Banyak mahasiswa mulai
+                    memakai asisten AI dari hal sederhana, seperti merangkum
+                    materi kuliah, sebelum memakainya untuk tugas yang lebih
+                    kompleks.
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- ===== KOMENTAR (Bootstrap form) ===== -->
+            <section class="mt-5 pt-4 border-top" aria-labelledby="judul-komentar">
+              <h2 id="judul-komentar" class="h5 mb-3">
+                <i class="bi bi-chat-dots me-1" aria-hidden="true"></i> Tinggalkan komentar
+              </h2>
+              <form action="#" method="post" class="d-flex gap-3">
+                <i class="bi bi-person-circle fs-1 text-body-secondary" aria-hidden="true"></i>
+                <div class="flex-grow-1">
+                  <label for="komentar" class="visually-hidden">Tulis komentar Anda</label>
+                  <textarea id="komentar" name="komentar" class="form-control mb-2" rows="3" placeholder="Tulis komentar Anda..." required></textarea>
+                  <button type="submit" class="btn btn-primary btn-sm">
+                    <i class="bi bi-send me-1" aria-hidden="true"></i> Kirim Komentar
+                  </button>
+                </div>
+              </form>
+            </section>
+          </div>
+        </div>
+
+        <!-- ===== ARTIKEL TERKAIT ===== -->
+        <aside class="row justify-content-center mt-5" aria-labelledby="judul-terkait">
+          <div class="col-lg-8">
+            <h2 id="judul-terkait" class="h5 mb-3">Artikel terkait</h2>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                  <div class="card-body">
+                    <span class="badge text-bg-warning text-dark mb-2">Produktivitas</span>
+                    <h3 class="h6 mb-0">
+                      <a href="blog.html" class="text-dark text-decoration-none stretched-link">
+                        5 Ide Otomasi AI untuk Tugas Harian Mahasiswa
+                      </a>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                  <div class="card-body">
+                    <span class="badge bg-primary-subtle text-primary-emphasis mb-2">Generative AI</span>
+                    <h3 class="h6 mb-0">
+                      <a href="blog.html" class="text-dark text-decoration-none stretched-link">
+                        AI Generatif vs AI Prediktif, Apa Bedanya?
+                      </a>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- ===== FOOTER: identitas brand + navigasi cepat ===== -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+      <div class="container">
+        <div class="row g-4 mb-4">
+          <div class="col-md-6">
+            <h2 class="h5">maha<span class="text-info">AI</span></h2>
+            <p class="text-white-50 mb-0">Asisten kecerdasan buatan untuk belajar dan bekerja.</p>
+          </div>
+          <nav class="col-md-6 text-md-end" aria-label="Navigasi footer">
+            <a href="index.html#home" class="link-light text-decoration-none me-3">Home</a>
+            <a href="index.html#layanan" class="link-light text-decoration-none me-3">Layanan</a>
+            <a href="blog.html" class="link-light text-decoration-none me-3">Blog</a>
+            <a href="cv.html" class="link-light text-decoration-none">CV</a>
+          </nav>
+        </div>
+        <div class="border-top border-secondary pt-3 text-center text-white-50 small">
+          &copy; 2026 mahaAI
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
