@@ -10,18 +10,23 @@
     />
     <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
 
-    <!-- Halaman ini memakai Bootstrap 5 + Bootstrap Icons (CDN).
-         Sama seperti pola preload+swap yang dipakai untuk Google Fonts di
-         halaman lain, kedua stylesheet ini dimuat non-blocking supaya
-         tidak menahan render pertama (mengatasi audit "Eliminate
-         render-blocking resources"). Begitu selesai diunduh, browser
-         otomatis menerapkannya sebagai stylesheet biasa. -->
+    <!-- Bootstrap 5 (CDN). Sempat dicoba dimuat non-blocking (preload+swap)
+         seperti Google Fonts, tapi itu menyebabkan CLS (layout shift):
+         karena CSS Bootstrap menentukan grid/kolom/tipografi seluruh
+         halaman, saat CSS-nya telat masuk, konten sempat tampil tanpa
+         styling lalu "melompat" begitu Bootstrap selesai dimuat. Jadi
+         untuk stylesheet layout-critical seperti ini, tetap dibuat
+         render-blocking seperti biasa — trade-off render sedikit lebih
+         lambat jauh lebih baik daripada CLS. -->
     <link
-      rel="preload"
-      as="style"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      onload="this.onload=null;this.rel='stylesheet'"
+      rel="stylesheet"
     />
+
+    <!-- Bootstrap Icons aman dimuat non-blocking karena cuma menambah ikon
+         dekoratif kecil (ukuran box-nya sudah ditentukan lewat CSS
+         Bootstrap di atas), jadi tidak memicu layout shift seperti
+         Bootstrap intinya. -->
     <link
       rel="preload"
       as="style"
@@ -29,10 +34,6 @@
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript>
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      />
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
