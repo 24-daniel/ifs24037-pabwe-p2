@@ -4,17 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mengenal Large Language Model dan Cara Kerjanya — mahaAI</title>
+    <meta
+      name="description"
+      content="Penjelasan sederhana cara kerja Large Language Model (LLM): bagaimana model memprediksi kata berikutnya dan tips menulis prompt yang efektif."
+    />
     <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
 
-    <!-- Halaman ini memakai Bootstrap 5 + Bootstrap Icons (CDN). -->
+    <!-- Halaman ini memakai Bootstrap 5 + Bootstrap Icons (CDN).
+         Sama seperti pola preload+swap yang dipakai untuk Google Fonts di
+         halaman lain, kedua stylesheet ini dimuat non-blocking supaya
+         tidak menahan render pertama (mengatasi audit "Eliminate
+         render-blocking resources"). Begitu selesai diunduh, browser
+         otomatis menerapkannya sebagai stylesheet biasa. -->
     <link
+      rel="preload"
+      as="style"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
     <link
-      rel="stylesheet"
+      rel="preload"
+      as="style"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+      />
+    </noscript>
+
+    <!-- Bootstrap Icons bawaan pakai font-display: block (ikon "hilang" sampai
+         font selesai dimuat). Override ini menimpanya jadi swap supaya ikon
+         langsung terlihat dengan font fallback, mengatasi audit "Font
+         display" tanpa perlu meng-host ulang filenya. -->
+    <style>
+      @font-face {
+        font-family: "bootstrap-icons";
+        font-display: swap;
+        src:
+          url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/fonts/bootstrap-icons.woff2?e34853135f9e39acf64315236852cd5a")
+            format("woff2"),
+          url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/fonts/bootstrap-icons.woff?e34853135f9e39acf64315236852cd5a")
+            format("woff");
+      }
+    </style>
   </head>
 
   <body class="bg-light">
@@ -72,10 +111,25 @@
                 </div>
 
                 <figure class="ratio ratio-21x9 rounded overflow-hidden mb-4">
+                  <!-- fetchpriority="high" + tanpa loading="lazy" supaya gambar
+                       ini (LCP element halaman) langsung ditemukan browser
+                       dari HTML awal. srcset/sizes + fm=webp&q=75 mengirim
+                       ukuran & format yang sesuai lebar tampil sebenarnya,
+                       bukan selalu 1200px penuh (mengatasi audit "Properly
+                       size images", "Serve images in next-gen formats", dan
+                       "Improve image delivery"). -->
                   <img
-                    src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200"
+                    src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=75&fm=webp&fit=crop"
+                    srcset="
+                      https://images.unsplash.com/photo-1677442136019-21780ecad995?w=480&q=75&fm=webp&fit=crop   480w,
+                      https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&q=75&fm=webp&fit=crop   900w,
+                      https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1350&q=75&fm=webp&fit=crop 1350w
+                    "
+                    sizes="(min-width: 992px) 700px, 100vw"
                     alt="Ilustrasi large language model"
                     class="object-fit-cover"
+                    fetchpriority="high"
+                    decoding="async"
                   />
                 </figure>
               </header>

@@ -17,7 +17,10 @@
       rel="preload"
       as="style"
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript>
       <link
@@ -60,9 +63,9 @@
             <span>belajar, bekerja, dan berkarya lebih cepat.</span>
           </h1>
           <p class="hero-description">
-            mahaAI membantu mahasiswa dan tim kecil membangun chatbot,
-            merapikan tugas berulang, dan membaca data lewat percakapan biasa
-            — tanpa perlu jadi ahli AI dulu.
+            mahaAI membantu mahasiswa dan tim kecil membangun chatbot, merapikan
+            tugas berulang, dan membaca data lewat percakapan biasa — tanpa
+            perlu jadi ahli AI dulu.
           </p>
           <div class="hero-buttons">
             <a href="#layanan" class="btn btn-primary">Lihat Layanan</a>
@@ -78,8 +81,8 @@
             <p class="eyebrow">Layanan kami</p>
             <h2>Apa saja yang bisa dibantu mahaAI</h2>
             <p>
-              Dari asisten chat harian sampai otomasi laporan, mahaAI
-              dirancang supaya mudah dipakai orang non-teknis sekalipun.
+              Dari asisten chat harian sampai otomasi laporan, mahaAI dirancang
+              supaya mudah dipakai orang non-teknis sekalipun.
             </p>
           </div>
 
@@ -98,9 +101,8 @@
               <div class="card-icon" aria-hidden="true">⚙️</div>
               <h3>Otomasi Tugas Berulang</h3>
               <p>
-                Mengotomatiskan pekerjaan seperti rekap absensi, entri data,
-                dan alur persetujuan sederhana memakai AI, tanpa perlu
-                coding.
+                Mengotomatiskan pekerjaan seperti rekap absensi, entri data, dan
+                alur persetujuan sederhana memakai AI, tanpa perlu coding.
               </p>
             </article>
 
@@ -132,10 +134,9 @@
             <p class="eyebrow">Tentang kami</p>
             <h2>Kenapa pilih mahaAI?</h2>
             <p>
-              mahaAI dibangun dari kebutuhan nyata: mahasiswa dan tim kecil
-              yang ingin memakai AI tanpa harus paham machine learning dulu.
-              Setiap fitur kami rancang agar bisa langsung dipakai sejak hari
-              pertama.
+              mahaAI dibangun dari kebutuhan nyata: mahasiswa dan tim kecil yang
+              ingin memakai AI tanpa harus paham machine learning dulu. Setiap
+              fitur kami rancang agar bisa langsung dipakai sejak hari pertama.
             </p>
             <ul class="keunggulan-list">
               <li>Onboarding cepat, tanpa perlu tim teknis khusus</li>
@@ -173,15 +174,35 @@
           <form class="contact-form" action="#" method="get">
             <div class="form-group">
               <label for="nama">Nama</label>
-              <input id="nama" name="nama" type="text" placeholder="Nama lengkap" autocomplete="name" required />
+              <input
+                id="nama"
+                name="nama"
+                type="text"
+                placeholder="Nama lengkap"
+                autocomplete="name"
+                required
+              />
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="nama@email.com" autocomplete="email" required />
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="nama@email.com"
+                autocomplete="email"
+                required
+              />
             </div>
             <div class="form-group">
               <label for="pesan">Pesan</label>
-              <textarea id="pesan" name="pesan" rows="4" placeholder="Ceritakan kebutuhan AI-mu..." required></textarea>
+              <textarea
+                id="pesan"
+                name="pesan"
+                rows="4"
+                placeholder="Ceritakan kebutuhan AI-mu..."
+                required
+              ></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Kirim Pesan</button>
           </form>
